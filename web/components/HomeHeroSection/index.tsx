@@ -15,13 +15,15 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
     title_image,
     section_theme,
   } = sectionProps || {};
-  const [showAnimation, setShowAnimation] = useState(false)
-  useEffect(()=>{
-    const timeout = setTimeout(()=>{setShowAnimation(true)}, 10000)
+  const [showAnimation, setShowAnimation] = useState(false);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowAnimation(true);
+    }, 10000);
     return () => {
-      clearTimeout(timeout)
-    }
-  },[])
+      clearTimeout(timeout);
+    };
+  }, []);
   return (
     <div
       className={clsx(
@@ -70,15 +72,17 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
                   </li>
                 </ul>
               </div>
-              <div className="max-w-[150px] my-12 em:my-0 inline-flex relative before:bg-ResposivemiddleArrow w-full
+              <div
+                className="max-w-[150px] my-12 em:my-0 inline-flex relative before:bg-ResposivemiddleArrow w-full
                      before:content-['']  em:before:content-none before:bg-[url(/Arrow.svg)] em:before:bg-hidden before:bg-no-repeat before:w-[2.5em]  before:h-[2.1em] before:xl:h-[1.5em] before:absolute   [&>img]:w-full [&>img]:h-full [&>img]:animate-[rotations_30s_linear_infinite]
-                   before:top-[53%]  before:left-[53%] before:-translate-x-2/4 before:-translate-y-2/4 [&>img]:relative  [&>img]:block em:[&>img]:hidden">
-                   <CustomImage
-                      block={title_image}
-                      height={150}
-                      width={150}
-                      priority
-                    />
+                   before:top-[53%]  before:left-[53%] before:-translate-x-2/4 before:-translate-y-2/4 [&>img]:relative  [&>img]:block em:[&>img]:hidden"
+              >
+                <CustomImage
+                  block={title_image}
+                  height={150}
+                  width={150}
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -86,13 +90,18 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
           <div className="lg:w-2/5 hidden lg:block">
             {hero_image && (
               <div>
-                <CustomImage block={hero_image} height={500} width={500} priority/>
+                <CustomImage
+                  block={hero_image}
+                  height={500}
+                  width={500}
+                  priority
+                />
               </div>
             )}
           </div>
         </div>
-        <div className="max-w-4/5 esm:max-w-[70%] em:max-w-4/5 lg:max-w-[64%] text-center relative z-0 mt-0 em:mt-12 mb-0 mx-auto my-0 pb-12 pt-0 em:pt-12 sm:pt-16">
-          <p className="text-sm em:text-base md:text-lg lg:text-xl !leading-[1.6em] font-normal text-dark-blue">
+        <div className="max-w-[80%] esm:max-w-[70%] lg:max-w-[64%] text-center mt-0 em:mt-12 mb-0 mx-auto pb-12 pt-0 em:pt-12 sm:pt-16">
+          <p className="text-sm em:text-base md:text-lg lg:text-xl leading-relaxed font-normal text-dark-blue">
             {bottom_description}
           </p>
         </div>

@@ -94,8 +94,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
                   block={hero_image}
                   height={500}
                   width={500}
-                  priority={false}
-                  loading="lazy"
+                  priority
                 />
               </div>
             )}

@@ -4,7 +4,9 @@ import dynamic from "next/dynamic";
 import { FeaturedCaseStudySectionType } from "@/lib/sanity/types/page";
 import CustomImage from "../CustomImage";
 import { PortableText } from "@portabletext/react";
-const ProgressBar = dynamic(() => import("../ProgressBar"));
+const ProgressBar = dynamic(() => import("../ProgressBar"), {
+  ssr: false,
+});
 
 const case_study_data = [
   {

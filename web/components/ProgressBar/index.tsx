@@ -9,6 +9,7 @@ const ProgressBar: React.FC<{
     const Parentdiv = {
         height: height,
         width: '100%',
+        position: 'relative'
         backgroundColor: 'whitesmoke',
         borderRadius: 40,
     }

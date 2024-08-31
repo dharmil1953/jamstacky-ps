@@ -38,8 +38,8 @@ const Frameworks: React.FC<{
       filtered_frameworks && filtered_frameworks?.length > 1
         ? filtered_frameworks[1]?.slug?.current || ""
         : "",
-  }); 
-  
+  });
+ 
   const { push } = useRouter();
   const optionsListFirst = useMemo(
     () =>
@@ -49,14 +49,6 @@ const Frameworks: React.FC<{
       ),
     [filtered_frameworks, frameworks]
   );
-  const loadMoreOptions = () => {
-    setVisibleOptions((prev) => [
-      ...prev,
-      ...optionsListFirst.slice(prev.length, prev.length + 10), // Load next 10 options
-    ]);
-  };
-
-  const [visibleOptions, setVisibleOptions] = useState(optionsListFirst.slice(0, 10));
   const optionsListSecond = useMemo(
     () =>
       (filtered_frameworks || []).filter(
@@ -156,14 +148,6 @@ const Frameworks: React.FC<{
                         framework1: e.target.value,
                       }))
                     }
-                    onScroll={(e) => {
-                      if (
-                        e.target.scrollHeight - e.target.scrollTop ===
-                        e.target.clientHeight
-                      ) {
-                        loadMoreOptions(); // Load more options when the user scrolls to the bottom
-                      }
-                    }}
                   >
                     {optionsListFirst.map((i, index) => (
                       <option value={i.slug?.current || ""} key={index}>

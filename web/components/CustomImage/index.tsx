@@ -1,5 +1,7 @@
-import { Image } from "../Image";
+// import { Image } from "../Image";
 import { ImageProps } from "next/image";
+import Image from 'next/image'
+
 import { CustomImageType } from "@/lib/sanity/types";
 import dynamic from "next/dynamic";
 // const Link = dynamic(() => import("../Link"));

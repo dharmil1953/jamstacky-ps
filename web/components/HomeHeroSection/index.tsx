@@ -35,7 +35,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
       )}
     >
       <Head>
-        {hero_image && <link rel="preload" href={hero_image} as="image" />}
+        <link rel="preload" href={hero_image} as="image" />
       </Head>
 
       <div className="container">
@@ -101,8 +101,6 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
                 // layout="responsive"
                 width={500}
                 height={500}
-                loading="eager"
-                priority
               />
             )}
           </div>

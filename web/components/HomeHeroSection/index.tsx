@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import CustomImage from "../CustomImage";
 import { HomeheroSectionType } from "@/lib/sanity/types/page";
+import Head from "next/head";
 const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
   const {
     bottom_description,
@@ -24,6 +25,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
       clearTimeout(timeout);
     };
   }, []);
+  // console.log(hero_image)
   return (
     <div
       className={clsx(
@@ -32,6 +34,10 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
         showAnimation && "animate-gradient"
       )}
     >
+      <Head>
+        <link rel="preload" href={hero_image} as="image" />
+      </Head>
+
       <div className="container">
         <div className="flex justify-between items-center pt-[12em] em:pt-[11em] pb-0 px-0">
           <div className="w-full xlg:w-3/5">

@@ -11,6 +11,7 @@ const CustomImage: React.FC<
   }
 > = ({ block, ...props }) => {
   const { alt, caption, image, link } = block || {};
+  
   if (!image) {
     return null;
   }

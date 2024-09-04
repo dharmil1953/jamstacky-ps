@@ -65,7 +65,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
                 )}
               </div>
               <p className="text-base emd:text-xl xl:text-[22px] font-normal leading-[1.5em] text-menu-title-text w-[90%] esm:w-4/5 em:w-full md:w-4/5 emd:w-full ml-auto em:ml-0 mr-auto">
-                {hero_description}
+              We use cutting-edge Jamstack Development to build high-performing, modern marketing websites for SMEs and corporates.
               </p>
               <div className="banner-btn">
                 <ul className="hover:[&>li>a]:text-white-color mt-4 block esm:flex justify-center em:justify-start">

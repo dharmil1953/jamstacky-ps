@@ -35,7 +35,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
       )}
     >
       <Head>
-        <link rel="preload" href={hero_image} as="image" />
+        <link rel="preload" href={hero_image?.image?.asset?.url} as="image" />
       </Head>
 
       <div className="container">

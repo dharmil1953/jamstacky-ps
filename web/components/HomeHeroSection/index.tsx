@@ -38,7 +38,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
       <Head>
         <link rel="preload" href={hero_image?.image?.asset?.url} as="image" />
         <link rel="Preload" href={bottom_description} />
-        
+        <link rel="Preload" href={hero_description} />
       </Head>
 
       <div className="container">
@@ -65,7 +65,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
                 )}
               </div>
               <p className="text-base emd:text-xl xl:text-[22px] font-normal leading-[1.5em] text-menu-title-text w-[90%] esm:w-4/5 em:w-full md:w-4/5 emd:w-full ml-auto em:ml-0 mr-auto">
-              We use cutting-edge Jamstack Development to build high-performing, modern marketing websites for SMEs and corporates.
+                {hero_description}
               </p>
               <div className="banner-btn">
                 <ul className="hover:[&>li>a]:text-white-color mt-4 block esm:flex justify-center em:justify-start">

@@ -16,7 +16,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
     title_image,
     section_theme,
   } = sectionProps || {};
-  
+
   const [showAnimation, setShowAnimation] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -106,9 +106,11 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
             )}
           </div>
         </div>
-        <div className="max-w-[80%] esm:max-w-[70%] lg:max-w-[64%] text-center mt-0 em:mt-12 mb-0 mx-auto pb-12 pt-0 em:pt-12 sm:pt-16">
+        <div className="max-w-[80%] esm:max-w-[70%] text-center em:mt-12 mx-auto pb-12 em:pt-12 sm:pt-16">
           <span className="text-sm em:text-base md:text-lg lg:text-xl leading-relaxed font-normal text-dark-blue">
-          Hire Your Remote White Label Jamstack Development Team in Just a Few Minutes. No Contract. Flat Monthly Rate. Cancel Anytime. 100% Satisfaction Guaranteed.
+            Hire Your Remote White Label Jamstack Development Team in Just a Few
+            Minutes. No Contract. Flat Monthly Rate. Cancel Anytime. 100%
+            Satisfaction Guaranteed.
           </span>
         </div>
       </div>

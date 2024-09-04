@@ -16,12 +16,12 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
     title_image,
     section_theme,
   } = sectionProps || {};
-  
+
   const [showAnimation, setShowAnimation] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowAnimation(true);
-    }, 10000);
+    }, 1000);
     return () => {
       clearTimeout(timeout);
     };
@@ -106,10 +106,12 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
             )}
           </div>
         </div>
-        <div className="max-w-[80%] esm:max-w-[70%] lg:max-w-[64%] text-center em:mt-12 mb-0 mx-auto pb-12 em:pt-12 sm:pt-16">
-          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-dark-blue">
-            {bottom_description}
-          </p>
+        <div className="w-4/5 lg:w-2/3 text-center em:mt-12 mb-0 mx-auto pb-12 em:pt-12 sm:pt-16">
+          {showAnimation && (
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-dark-blue">
+              {bottom_description}
+            </p>
+          )}
         </div>
       </div>
     </div>

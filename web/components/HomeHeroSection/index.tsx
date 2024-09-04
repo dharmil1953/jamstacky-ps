@@ -108,7 +108,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
             )}
           </div>
         </div>
-        <div className="max-w-[80%] esm:max-w-[70%] lg:max-w-[64%] text-center mt-0 em:mt-12 mb-0 mx-auto pb-12 pt-0 em:pt-12 sm:pt-16">
+        <div className="text-center  mx-auto pb-12 pt-0 em:pt-12 sm:pt-16">
           <p className="text-sm em:text-base md:text-lg lg:text-xl leading-relaxed font-normal text-dark-blue">
             {bottom_description}
           </p>

@@ -106,7 +106,7 @@ const Hero: React.FC<HomeheroSectionType> = (sectionProps) => {
             )}
           </div>
         </div>
-        <div className="text-center mx-auto py-5">
+        <div className="max-w-[80%] esm:max-w-[70%] lg:max-w-[64%] text-center mt-0 em:mt-12 mb-0 mx-auto pb-12 pt-0 em:pt-12 sm:pt-16">
           <span className="text-sm em:text-base md:text-lg lg:text-xl leading-relaxed font-normal text-dark-blue">
             Hire Your Remote White Label Jamstack Development Team in Just a Few
             Minutes. No Contract. Flat Monthly Rate. Cancel Anytime. 100%
